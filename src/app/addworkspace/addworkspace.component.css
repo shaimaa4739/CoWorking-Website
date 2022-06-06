@@ -1,0 +1,124 @@
+.carousel .carousel-item {
+    height: 600px;
+  }
+  
+  .carousel-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 600px;
+  }
+
+  .partner--img {
+    width: 100%;
+    height: 90px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 13px rgb(0 0 0 / 20%);
+    min-width: 190px;
+  }
+  .coworker-home-validate-outer {
+    padding: 35px 0 68px;
+    
+  
+  }
+  
+  .home-validated-img {
+    width: 77px;
+    height: 72px;
+    box-shadow: 0 4px 13px rgba(156,167,165,.36);
+    -moz-box-shadow: 0 4px 13px rgba(156,167,165,.36);
+    -webkit-box-shadow: 0 4px 13px rgba(156,167,165,.36);
+    -o-box-shadow: 0 4px 13px rgba(156,167,165,.36);
+    -ms-box-shadow: 0 4px 13px rgba(156,167,165,.36);
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .coworker-home-validate-inner h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+    color: #464c4b;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e3e8ef;
+  }
+  
+   .newspace{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+ .newspace .box{
+
+    background-color: rgb(234, 234, 234);
+    width: 85%;
+    border-radius: 10px;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: #e7e7e7 0px 10px 35px 0px;
+
+
+}
+ .newspace .box label{
+    padding-left: 7px;
+    font-size: 1.1rem;
+}
+ .newspace .box input{
+    border-radius: 25px;
+    border: none;
+    box-shadow: #e7e7e7 0px 5px 10px 0px;
+
+}
+ .newspace .box .btn{
+    color: white;
+    border: 1px solid white;
+    background-image: linear-gradient(to right, #6474E5 , #9AA4EC);
+
+    border-radius: 25px;
+    padding: 5px;
+}
+ .newspace .box .btn:hover{
+    background-image: linear-gradient(to right, #6474E5 , #6474E5);
+
+
+}
+ 
+  @media (max-width: 768px) {
+    .masthead h1, .masthead .h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+    .newspace .box{
+
+      width: 100%;
+      padding: 15px;
+      padding-left: 40px;
+      padding-right: 40px;
+  
+  
+  }
+  .coworker-home-validate-outer .col-lg-4{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+    .bgform .sponsers .col-md-2{
+      margin-bottom: 20px;
+
+    }
+  }
+  
+  

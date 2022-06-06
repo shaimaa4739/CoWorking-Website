@@ -1,0 +1,71 @@
+.row .center{
+    background-color: #F4A4A4;
+    color: rgb(32, 32, 32);
+    text-align: center;
+    
+    padding-top: 100px;
+}
+.row .center h3{
+    font-size: 2.2rem;
+}
+.row .center h5{
+    font-size: 1.7rem;
+}
+.row .center p{
+    font-weight: 600;
+}
+.row .topright{
+    background:  url('./../../assets/Images/home/generic-square-1.jpg');
+}
+.row .bottomcenter{
+    padding-left:0px; 
+    padding-right:0px;
+}
+.row .bottomcenter img{
+    height: 500px;
+}
+.row .bottomleft{
+    background-color: #b3baeb;
+    padding-top: 90px;
+    text-align: center;
+}
+.row .bottomright{
+    background-color: rgb(131, 143, 238);
+    color: rgb(32, 32, 32);
+    padding-top: 50px;
+    text-align: center;
+}
+.row .bottomright input{
+    border-radius: 25px;
+    border: none;
+
+}
+.row .bottomright textarea{
+    border-radius: 10px;
+    border: none;
+
+}
+.row .bottomright .btn{
+    box-shadow: 0px 0px 0px 0px;
+    background-color: white;
+    border-radius: 25px;
+    color: #96a0ec;
+    font-weight: 500;
+    
+}
+.row .bottomright .btn:hover{
+    box-shadow: 0px 0px 0px 0px;
+    background-color: #F4A4A4;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    
+}
+@media (max-width: 767px) { 
+    .topleft img{
+        width: 460px;
+    }
+    .topright img{
+        width: 460px;
+    }
+}

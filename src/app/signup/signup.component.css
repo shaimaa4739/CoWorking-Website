@@ -1,0 +1,108 @@
+body{
+   padding-top: 50px;
+   padding-bottom: 50px;
+   padding-left: 150px;
+   padding-right: 150px;
+    }
+    .box{
+       
+       background-color: white;
+       border-radius: 0px;
+       box-shadow: #6474E5 0px 7px 29px 0px;
+       
+       
+    }
+    .logbox{
+      background-color:  #6474E5;
+      text-align: center;
+      padding-top: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .logbox h1{
+       color: white;
+    }
+     .mybtn{
+     border-radius:20px;
+     transition: all .5s;
+
+     }
+    
+     .login-or {
+     position: relative;
+     color: white;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     }
+     .span-or {
+     display: block;
+     position: absolute;
+     left: 50%;
+     top: -2px;
+     margin-left: -25px;
+     width: 50px;
+     text-align: center;
+     }
+     .hr-or {
+     height: 1px;
+     margin-top: 0px !important;
+     margin-bottom: 0px !important;
+     }
+     
+      form .error {
+     color: #ff0000;
+     }
+     #second{display:none;}
+     
+     .btn:hover{
+        transition: all .5s;
+        background: transparent;
+        color: black;
+        
+     }
+     .form-control{
+       border-radius: 35px;
+       margin-left: 2px;
+    }
+    @media (max-width: 767px) { 
+      body{
+         padding-top: 10px;
+         padding-bottom: 0px;
+         padding-left: 0px;
+         padding-right: 0px;
+          }
+          .box{
+       
+            box-shadow: #6474E5 0px 0px 0px 0px;
+            
+            
+         }
+          img{
+             width: 0px;
+          }
+          .logbox{
+            background-color:  white;
+            text-align: center;
+            padding-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+          }
+          .logbox h1{
+            color: rgb(27, 27, 27);
+         }
+          
+         .mybtn{
+            color: white !important;
+       
+            }
+          .login-or {
+          color: rgb(27, 27, 27);
+         
+          }
+          .logbox .sign p,a{
+            color: rgb(39, 66, 139) !important;
+         }
+          
+  }

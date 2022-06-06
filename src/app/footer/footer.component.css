@@ -1,0 +1,39 @@
+footer{
+    background-image: linear-gradient(to right, #6474E5 , #9AA4EC);
+}
+footer .icon{
+    border-radius: 50%;
+}
+footer .icon:hover{
+    border-radius: 50%;
+    color: #6474E5;
+    background-color: white;
+}
+footer .Comindinfo .about p{
+    font-size: 1.1rem;
+}
+
+footer .Comindinfo .pages a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    
+}
+footer .Comindinfo .pages a:hover{
+    border: 1px solid white;
+    border-radius: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.15rem;
+}
+footer .Comindinfo .contact .contactinfo{
+    padding-left: 110px;
+    text-align: left;
+}
+@media (max-width: 768px) { 
+    footer{
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+}

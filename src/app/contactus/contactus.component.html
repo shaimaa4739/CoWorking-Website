@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-4 topleft">
+                <img src="../../assets/images/home/generic-square-4.jpg" alt="">
+                
+            </div>
+            <div class="col-lg-4 center">
+                <img src="../../assets/images/home/map.png" class="mb-3" style="width: 100px;" alt="">
+                <h3>Get In Touch</h3>
+                <p>Our Address</p>
+                <h5>Wiki House</h5>
+                <p>Wilberforce Street, Hull, HU3 2JR <br> help@comind.com <br> 0110008520</p>
+            </div>
+            <div class="col-lg-4 topright">
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 part2">
+        <div class="row">
+            <div class="col-lg-4 bottomleft">
+                <div class="row my-4">
+                    <div class="col-lg-12 icons">
+                        <img src="../../assets/images/home/message.png" class="my-2" style="width: 70px;" alt="">
+                        <h5>Support E-mail Address</h5>
+                        <p>help@comind.com</p>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-lg-12 icons">
+                        <img src="../../assets/images/home/cell-phone.png" class="my-2" style="width: 70px;" alt="">
+                        <h5>Sales Phone Number</h5>
+                        <p>0110008520</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 bottomcenter" >
+                <img src="../../assets/images/home/generic-6 (1).jpg" style=" width: 570px; " alt="">
+            </div>
+            <div class="col-lg-4 bottomright">
+                <form class="container" (ngSubmit)="onSubmitForm()" action="" >
+                    <div class="row">
+                        <h2 class="text-center my-4">
+                            Contact Us
+                        </h2>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12  mx-auto ">
+                                <div class="form-group">
+                                    <input type="text" name="username" id="username"
+                                        placeholder="username ..." class=" my-1 form-control"
+                                        [(ngModel)]="message.username" required minlength="8"
+                                        #username="ngModel">
+                                </div>
+                                <div *ngIf="username.invalid && (username.dirty||username.touched)"
+                                    class="alert alert-danger ">
+                                    <div *ngIf="username.errors?.required">
+                                        User Name is required
+                                    </div>
+                                    <div *ngIf="username.errors?.minlength">
+                                        Shoud be 8 charchters
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 mx-auto">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email"
+                                        placeholder="Email ..." class="form-control" 
+                                        [(ngModel)]="message.email" #email="ngModel"
+                                        required email >
+                                </div>
+                                <div *ngIf="email.invalid && (email.dirty||email.touched)"
+                                    class="alert alert-danger my-2">
+                                    <div *ngIf="email.errors?.required">
+                                        Email is required
+                                    </div>
+                                    <div *ngIf="email.errors?.email">
+                                        Email is not valid
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 my-3 mx-auto">
+                            <div class="form-group">
+                                <textarea name="message" id="message" cols="3" rows="5"
+                                    placeholder="Leave your message ..." class="form-control" 
+                                    [(ngModel)]="message.message" >
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="submit text-center my-3 ">
+                            <input type="submit" value="Send" class="btn btn-outline-primary ">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

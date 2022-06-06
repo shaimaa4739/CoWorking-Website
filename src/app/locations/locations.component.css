@@ -1,0 +1,48 @@
+
+.locations .container .row .card{
+    border: none;
+    box-shadow: #dad9d9 0px 7px 15px 0px; 
+    border-radius: 25px;
+    margin: 10px;
+    overflow: hidden;
+  }
+.locations .container .row .card:hover{
+    box-shadow: #dad9d9 0px 7px 75px 0px; 
+}
+.locations .container .row .card .card-body{
+    font-family: sans-serif;
+}
+.locations .container .row .card .card-body .details{
+    font-family: sans-serif;
+    color:rgb(95, 95, 95);
+    
+}
+.locations .container .row .card .card-body .value{
+    text-align: right;
+    
+}
+.locations .container .row .map{
+  position: sticky;
+  top: 0px;
+}
+.locations .container .row .book a{
+    width: 100%;
+    border-radius: 25px;
+    margin-right: 20px;
+    border:1px solid #f7f7f7 ;
+    background-color: #8591e6;
+    color: white;
+
+}
+.locations .container .row .book a:hover{
+    
+    border:1px solid #F4A4A4 ;
+    background-color: #F4A4A4;
+    color: white;
+
+}
+@media (max-width: 767px) { 
+    .locations .container .row .map iframe{
+        width: 370px;
+      }
+}

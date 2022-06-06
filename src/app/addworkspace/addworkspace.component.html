@@ -1,0 +1,263 @@
+<section class="curs ">
+
+    <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../assets/images/owner/1.jpg" class="d-block w-100 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>List Your Work Space </h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/images/owner/2.jpg" class="d-block w-100 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Find A Work Space</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+              <a class="btn btn-dark btn-outline-light" routerLink="/locations">Locations</a>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/images/owner/3.jpg" class="d-block w-100 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>About Us</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+              <a class="btn btn-dark btn-outline-light" routerLink="/">Home</a>
+
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</section>
+
+ <section class="coworker-home-validate-outer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pad-none network-book-coworker-heading text-center pb-4">
+                <h2>Why Book On Comind</h2>
+            </div>
+            <div class="col-lg-4 pad-none coworker-home-validate-inner">
+                <div class="home-validated-img">
+                    <i class="fas fa-check" style="font-size: 30px; color: cornflowerblue;"></i>
+                </div>
+                <h4>Validated Spaces</h4>
+                <p>Over 18,500 spaces and meeting rooms, with more than 300 new
+                    spaces joining each month.</p>
+            </div>
+            <div class="col-lg-4 pad-none coworker-home-validate-inner">
+                <div class="home-validated-img">
+                    <img src="../../assets/images/owner/yoo.png" alt="icon">
+                </div>
+                <h4>Trusted</h4>
+                <p>For Entrepeneurs to Fortune 500 companies, Coworker has over 6 million users.</p>
+            </div>
+            <div class="col-lg-4 pad-none coworker-home-validate-inner">
+                <div class="home-validated-img"> <img src="../../assets/images/owner/free.png" alt="icon">
+
+
+                </div>
+                <h4>100% Free of charge</h4>
+                <p>Whether a single desk or a team of 100, Coworker never charges you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bgform">
+    <section class="newspace ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <form class="container" (ngSubmit)="onSubmitForm()" action="" >
+                        <div class="row">
+                            <div class="box">
+                                <h2 class="text-center">
+                                    New WorkSpace
+                                </h2>
+                                <div class="col-lg-12 col-md-12 col-sm-12  mx-auto my-3">
+                                    <div class="form-group">
+                                        <input type="text" name="workspacename" id="workspacename"
+                                            placeholder="company name ..." class=" my-1 form-control "
+                                            [(ngModel)]="new.workspacename" required minlength="8"
+                                            #workspacename="ngModel">
+                                    </div>
+                                    <div *ngIf="workspacename.invalid && (workspacename.dirty||workspacename.touched)"
+                                        class="alert alert-danger my-2">
+                                        <div *ngIf="workspacename.errors?.required">
+                                            Company Name is required
+                                        </div>
+                                        <div *ngIf="workspacename.errors?.minlength">
+                                            Shoud be 8 charchters
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 my-3 mx-auto">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email"
+                                            placeholder="Email ..." class="form-control" required email
+                                            [(ngModel)]="new.email" #email="ngModel">
+                                    </div>
+                                    <div *ngIf="email.invalid && (email.dirty||email.touched)"
+                                        class="alert alert-danger my-2">
+                                        <div *ngIf="email.errors?.required">
+                                            Email is required
+                                        </div>
+                                        <div *ngIf="email.errors?.email">
+                                            Email is not valid
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 my-3 mx-auto">
+                                    <div class="form-group">
+                                        <input type="tel" name="phonenumber" id="phonenumber"
+                                            placeholder="Phone Number" class="form-control" required
+                                            [(ngModel)]="new.phonenumber" #phonenumber="ngModel">
+                                    </div>
+                                    <div *ngIf="phonenumber.invalid && (phonenumber.dirty||phonenumber.touched)"
+                                        class="alert alert-danger my-2">
+                                        <div *ngIf="phonenumber.errors?.required">
+                                            Phone Number is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                                        <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <input type="country" name="country" id="country"
+                                                placeholder="country" class="form-control" required
+                                                [(ngModel)]="new.country" #country="ngModel">
+                                        </div>
+                                        <div *ngIf="country.invalid && (country.dirty||country.touched)"
+                                            class="alert alert-danger my-2">
+                                            <div *ngIf="country.errors?.required">
+                                                Country is required
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                                        <div class="form-group">
+                                            <label for="city">City</label>
+                                            <input type="city" name="city" id="city" required
+                                                placeholder="city" class="form-control"
+                                                [(ngModel)]="new.city" #city="ngModel">
+                                        </div>
+                                        <div *ngIf="city.invalid && (city.dirty||city.touched)"
+                                            class="alert alert-danger my-2">
+                                            <div *ngIf="city.errors?.required">
+                                                City is required
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                                        <div class="form-group">
+                                            <label for="noofrooms">Rooms </label>
+                                            <input type="number" name="noofrooms" id="noofrooms"
+                                                placeholder="1" class="form-control" required
+                                                [(ngModel)]="new.noofrooms" #noofrooms="ngModel">
+                                        </div>
+                                        <div *ngIf="noofrooms.invalid && (noofrooms.dirty||noofrooms.touched)"
+                                            class="alert alert-danger my-2">
+                                            <div *ngIf="noofrooms.errors?.required">
+                                                No of rooms is required
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                                        <div class="form-group">
+                                            <label for="noofpeople">Persons</label>
+                                            <input type="number" name="noofpeople" id="noofpeople"
+                                                placeholder="1" class="form-control" required
+                                                [(ngModel)]="new.noofpeople" #noofpeople="ngModel">
+                                        </div>
+                                        <div *ngIf="noofpeople.invalid && (noofpeople.dirty||noofpeople.touched)"
+                                            class="alert alert-danger my-2">
+                                            <div *ngIf="noofpeople.errors?.required">
+                                                No of people is required
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="submit text-center my-3 ">
+                                    <input type="submit" (click)="div1Function()" value="Add" class="btn btn-outline-primary w-100">
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class=" col-lg-6 pt-5" *ngIf="div2">
+                    <h4 style="padding-left: 60px;"> <img src="../../assets/images/reserve/success.png" style="width: 30px;"alt=""> Your Workspace Was Added</h4>
+
+                    <div class="back">
+                        <img src="../../assets/images/reserve/party.png" style="width: 500px;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5" *ngIf="div1">
+                    <h3>Go Add Your WorkSpace</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium obcaecati nisi quam aperiam tempore, praesentium ea ut nesciunt dolore animi dolorem et rem quos beatae, quisquam cumque nostrum? Voluptatem, eaque?</p>
+                    <img src="../../assets/images/home/add.png" style="width: 400px;" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<section class="sponsers">
+    <div class="container my-5">
+        <div class="row">
+            <h3 class="text-center my-4">Our Sponsers</h3>
+            <div class="col-md-2">
+                <div class="partner--img">
+                    <img src="https://d2w68ocb6l47bj.cloudfront.net/v20210831/_redesign/img/partner-logo-21042021-08.png"
+                        alt="MindSpace">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="partner--img"><img
+                        src="https://d2w68ocb6l47bj.cloudfront.net/v20210831/_redesign/img/partner-logo-21042021-10.png"
+                        alt="Spaces"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="partner--img">
+                    <div class="partner--img"><img
+                            src="https://d2w68ocb6l47bj.cloudfront.net/v20210831/_redesign/img/partner-logo-21042021-09.png"
+                            alt="Serendipity Labs"></div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="partner--img"><img
+                        src="https://d2w68ocb6l47bj.cloudfront.net/v20210831/_redesign/img/partner-logo-21042021-01.png"
+                        alt="Servcorp"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="partner--img"><img
+                        src="https://d2w68ocb6l47bj.cloudfront.net/v20210831/_redesign/img/partner-logo-21042021-02.png"
+                        alt="Regus"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="partner--img"><img
+                        src="https://d2w68ocb6l47bj.cloudfront.net/v20210831/_redesign/img/partner-logo-21042021-06.png"
+                        alt="WeWork"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>

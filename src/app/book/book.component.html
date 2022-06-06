@@ -1,0 +1,165 @@
+<section class="reserve ">   
+    <form class="container" (ngSubmit)="onSubmitForm()" action="" >
+        <div class="row">
+            <div class="box col-lg-6 col-md-12 col-sm-12">
+                <h2 class="text-center">
+                    Reserve 
+                </h2>
+                <div class="col-lg-12 col-md-12 col-sm-12  mx-auto my-3">
+                    <div class="form-group">
+                        <input type="text" name="companyname" id="companyname"
+                            placeholder="company name ..." class=" my-1 form-control"
+                            [(ngModel)]="reservation.companyname" required minlength="8"
+                            #companyname="ngModel">
+                    </div>
+                    <div *ngIf="companyname.invalid && (companyname.dirty||companyname.touched)"
+                        class="alert alert-danger my-2">
+                        <div *ngIf="companyname.errors?.required">
+                            Company Name is required
+                        </div>
+                        <div *ngIf="companyname.errors?.minlength">
+                            Shoud be 8 charchters
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-3 mx-auto">
+                    <div class="form-group">
+                        <input type="email" name="email" id="email"
+                            placeholder="Email ..." class="form-control" 
+                            [(ngModel)]="reservation.email" required email
+                            #email="ngModel">
+                    </div>
+                    <div *ngIf="email.invalid && (email.dirty||email.touched)"
+                        class="alert alert-danger my-2">
+                        <div *ngIf="email.errors?.required">
+                            Email is required
+                        </div>
+                        <div *ngIf="email.errors?.email">
+                            Email is not valid
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-3 mx-auto">
+                    <div class="form-group">
+                        <input type="tel" name="phonenumber" id="phonenumber"
+                            placeholder="Phone Number" class="form-control" 
+                            [(ngModel)]="reservation.phonenumber" required 
+                            #phonenumber="ngModel">
+                    </div>
+                    <div *ngIf="phonenumber.invalid && (phonenumber.dirty||phonenumber.touched)"
+                        class="alert alert-danger my-2">
+                        <div *ngIf="phonenumber.errors?.required">
+                            Phone Number is required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-md-offset-4 my-3 mx-auto">
+                    <div class="form-group">
+                        <input type="date" name="day" id="day"
+                            placeholder="day" class="form-control" 
+                            [(ngModel)]="reservation.day" required
+                            #day="ngModel">
+                    </div>
+                    <div *ngIf="day.invalid && (day.dirty||day.touched)"
+                        class="alert alert-danger my-2">
+                        <div *ngIf="day.errors?.required">
+                            Date is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                        <div class="form-group">
+                            <label for="from">From</label>
+                            <input type="time" name="from" id="from"
+                                placeholder="from" class="form-control" 
+                                [(ngModel)]="reservation.from">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                        <div class="form-group">
+                            <label for="to">To</label>
+                            <input type="time" name="to" id="to"
+                                placeholder="to" class="form-control" 
+                                [(ngModel)]="reservation.to">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                        <div class="form-group">
+                            <label for="noofrooms">Rooms </label>
+                            <input type="number" name="noofrooms" id="noofrooms"
+                                placeholder="1" class="form-control" 
+                                [(ngModel)]="reservation.noofrooms" required
+                                #noofrooms="ngModel">
+                        </div>
+                        <div *ngIf="noofrooms.invalid && (noofrooms.dirty||noofrooms.touched)"
+                        class="alert alert-danger my-2">
+                        <div *ngIf="noofrooms.errors?.required">
+                            No of rooms is required
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6  mx-auto">
+                        <div class="form-group">
+                            <label for="noofpeople">Persons</label>
+                            <input type="number" name="noofpeople" id="noofpeople"
+                                placeholder="1" class="form-control" 
+                                [(ngModel)]="reservation.noofpeople" required
+                                #noofpeople="ngModel">
+                        </div>
+                        <div *ngIf="noofpeople.invalid && (noofpeople.dirty||noofpeople.touched)"
+                        class="alert alert-danger my-2">
+                        <div *ngIf="noofpeople.errors?.required">
+                            No of people is required
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="submit text-center my-3 ">
+                    <input type="submit" (click)="div1Function()" value="Reserve" class="btn btn-outline-primary w-100">
+
+                </div>
+            </div>
+            <div class="boxReceipt col-lg-6 col-md-12 col-sm-12" *ngIf="div1">
+                <h2 class="text-center my-4">
+                    Payment Receipt
+                </h2>
+                <div class="row my-2">
+                    <div class="col-lg-10 col-md-6 col-sm-6">
+                        <h4>Reservation Number :</h4>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 text-center">
+                        <h6 >20172381</h6>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-lg-10 col-md-6 col-sm-6 ">
+                        <h4>Company Name :</h4>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 text-center">
+                     <h6>Hamadaaa</h6>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-lg-10 col-md-6 col-sm-6">
+                        <h4>Number Of Rooms :</h4>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 text-center">
+                        <h6>7</h6>
+                    </div>
+                </div><div class="row my-2">
+                    <div class="col-lg-10 col-md-6 col-sm-6">
+                        <h4>Number Of people :</h4> 
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 text-center">
+                        <h6>70</h6>
+                    </div>
+                </div>
+                
+                <h4 class=" text-center my-5"> <img src="../../assets/images/reserve/money.png" style="width: 35px;" alt=""> 5000 EG</h4>
+            </div>
+        </div>
+    </form>
+</section>

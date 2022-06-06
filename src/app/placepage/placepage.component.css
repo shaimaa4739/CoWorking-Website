@@ -1,0 +1,95 @@
+.workspace h1{
+    color: #747fd4;
+}
+.workspace .afterh1{
+    border-top: 1px solid rgb(250, 250, 250);
+}
+.workspace .box{
+    background-color: white !important;
+    box-shadow: #dad9d9 0px 7px 75px 0px; 
+    border-radius: 25px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    margin-right: 20px;
+    transition: transform .1s;
+}
+.workspace .box:hover{
+    transform: scale(1.03);
+    box-shadow: #dad9d9 0px 7px 95px 0px; 
+}
+.workspace .box .btn{
+    border: 1px solid white;
+    background-color: #6c9bf3 !important;
+    border-radius: 25px;
+    padding: 5px;
+}
+.workspace .box .btn:hover{
+    box-shadow: #6c9bf3 0px 7px 10px 0px; 
+}
+.workspace .carousel{
+    margin-left: 30px;
+    border-radius: 25px;    
+    overflow: hidden;
+    width: 800px;
+}
+.workspace .content .facilities{
+    color: rgb(75, 75, 75);
+}
+.workspace .content .notallowed{
+    color: rgb(177, 177, 177);
+}
+
+.addReviews input{
+    box-shadow: #e4e4e4 0px 7px 29px 0px;
+    border-radius: 35px;
+    height: 50px;
+}
+.addReviews .btn{
+    font-size: 1.1rem;
+    color: white;
+    background-color:  #9fd6bf;
+    border-color: rgb(253, 234, 231);
+    border-radius: 35px;
+    width: 70%;
+}
+.addReviews .btn:hover{
+    color: white;
+    background-color: #88c5ac;
+    border-color: rgb(253, 228, 224);
+    border-radius: 35px;
+
+}
+.addReviews i{
+    color: #6c9bf3;
+}
+
+.showReviews .card{
+    border-radius: 25px;
+    padding-left: 15px;
+    background-color: rgb(247, 247, 247);    
+    transition: transform .1s;
+
+}
+  
+.showReviews .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(231, 231, 231, 0.2) !important;
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 767px) { 
+    .workspace .box{
+        margin-right: 10px;
+    }
+    .workspace .carousel{
+        margin-left: 15px;
+        width: 350px;
+    }
+    .addReviews input{
+        width:75%;
+    }
+    .addReviews .btn{
+        
+        width: 25%;
+    }
+}

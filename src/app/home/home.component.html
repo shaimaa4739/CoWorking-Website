@@ -1,0 +1,153 @@
+<!-- Sectione Welcome Start -->
+<section class="welcome">
+    <div class="container ">
+        <div class="row">
+            <div class="box my-5 p-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-4 col-sm-2 welcomemsg ">
+                        <div class="animate__animated animate__pulse">
+                            <h1>Welcome to Comind</h1>
+                            <h4 >Find the right Co Working Space to finish your tasks.</h4>
+                            <p>Rapid office search. On-demand access to workspaces. Remote-friendly solutions. All managed in one place. Easy.</p>
+                            
+                        </div>
+                        <a routerLink="/locations" class="btn btn-outline-dark btnlocation mb-5 my-4">Location</a>
+                        <a  routerLink="/addworkspace" class="btn btn-outline-dark btnowner mb-5 my-4">List Your Space</a>
+                    
+                    </div> 
+                    <div class="col-lg-6 col-md-8 col-sm-10 back-img animate__animated animate__zoomIn">
+                        <img src="../../assets/images/home/coworking.jpg" alt="">
+    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section Welcome End  -->
+
+<!-- Section How it work for our customers start-->
+
+    <section class="customersteps">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center my-4 mb-5">How it works <img src="../../assets/images/reserve/problem.png" style="width: 50px; padding-bottom: 20px;" alt=""></h2>
+                <div class="col-lg-6 col-md-6- col-sm-12">
+                    <div class="sectionbackground animate__animated animate__fadeInLeft">
+                        <img src="../../assets/images/reserve/reserve.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6-col-sm-12 animate__animated animate__fadeInRight">
+                    <div class="row" *ngFor="let step of steps">
+                        <div class="col-lg-1 col-md-12 col-sm-12 stepsicons">
+                            <img [src]="step.stepimage" alt="">
+                        </div>
+                        <div class="col-lg-11 col-md-12 col-sm-12 stepsdesribtion">
+                            <p>
+                                {{step.stepdescription}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Section How it work for our customers end-->
+
+<!-- Section How it work for our Owners start-->
+
+<section class="ownersteps">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center my-4 mb-5">List Your Space <img src="../../assets/images/reserve/cooperation.png" style="width: 50px; " alt=""></h2>
+            
+            <div class="col-lg-6 col-md-6-col-sm-12 animate__animated animate__fadeInLeft mt-5 ">
+                <div class="row" *ngFor="let step of ownersteps">
+                    <div class="col-lg-1 col-md-12 col-sm-12 stepsicons">
+                        <img [src]="step.stepimage" alt="">
+                    </div>
+                    <div class="col-lg-11 col-md-12 col-sm-12 stepsdesribtion">
+                        <h4>{{step.stepname}}</h4>
+                        <p>
+                            {{step.stepdescription}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6- col-sm-12">
+                <div class="sectionbackground  animate__animated animate__fadeInRight">
+                    <img src="../../assets/images/reserve/property.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section How it work for our Owners end-->
+
+
+
+
+<!-- Section About Start -->
+
+<section class="about-new-glance-panel160819">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center my-5 abouthead">About Us </h2>
+            <div class="col-md-4 col-sm-4 col-md-4 col-xs-4  about-new-glance-outer160819">
+                <img src="https://coworker.imgix.net/template/img/about/new/img_glance_icon01.png" alt="icon">
+                <h4 class="p-2">3,000,000 Users</h4>
+                <p>More than 200,000 people use Coworker each month to find and book coworking spaces.</p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 pad_none about-new-glance-outer160819">
+                <img src="https://coworker.imgix.net/template/img/about/new/img_glance_icon02.png" alt="icon">
+                <h4 class="p-2">18,500+ Spaces</h4>
+                <p>Our marketplace holds the largest network of verified coworking spaces globally, with more than 300 new spaces joining each month.</p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 pad_none about-new-glance-outer160819">
+                <img src="https://coworker.imgix.net/template/img/about/new/img_glance_icon03.png" alt="icon">
+                <h4 class="p-2">12 Locations</h4>
+                <p>Our team and offices span 12 wonderful locations around the world</p>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-sm-4 col-md-4 col-xs-4 pad_none about-new-glance-outer160819">
+                <img src="https://coworker.imgix.net/template/img/about/new/img_glance_icon04.png" alt="icon">
+                <h4 class="p-2">172 Countries</h4>
+                <p>Coworking is truly global, and our network continues to expand every month by welcoming spaces in new cities and countries.</p>
+                </div>
+            <div class="col-sm-4 col-md-4 col-xs-4 pad_none about-new-glance-outer160819">
+                <img src="https://coworker.imgix.net/template/img/about/new/img_glance_icon05.png" alt="icon">
+                <h4 class="p-2">24/7 Customer Service</h4>
+                <p> When it comes to customer service, we raise the bar with an around-the-clock access team of coworking experts to answer any inquiries.</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>    
+</section>
+
+<!-- Section About End -->
+
+<!-- section customer review start -->
+
+<section class="reviews">
+    <div class="container">
+        <div class="row my-5">
+            <h3 class="text-center my-5">Our Cominders reviews <img src="../../assets/images/reserve/chat.png" style="width: 50px;" alt=""></h3>
+            <div class="col-lg-3 col-md-6 col-sm-12 text-center holdcard" *ngFor="let reviewer of reviewers">
+                <div class="card" style="width: 18rem;">
+                    <img [src]="reviewer.reviewerimage" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{reviewer.reviewerna}}</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <i class="fas fa-star"> </i><i class="fas fa-star"> </i><i class="fas fa-star"> </i>
+                      <i class="fas fa-star"> </i><i class="far fa-star"></i>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- section customer review end -->
